@@ -1,4 +1,4 @@
 login-via-weibo-oauth
 =====================
 
-weibo、qq
+第三方开放平台帐号登录Web 

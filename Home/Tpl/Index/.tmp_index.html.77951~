@@ -1,0 +1,384 @@
+<include file="Public:header" />
+	<link rel="stylesheet" href="/images/274a79e6a2c7cbaa.css">
+	
+            <div id="content">
+                <div class="grid-16-8 clearfix">
+                    <div class="article">
+                        <div class="home-recommend">
+                            <div class="home-recommend-col1">
+                                <div class="dx-nav">
+                                    <div class="bd">
+                                        <ul>
+                                        	<volist name="first_level_category_list" id="rs">
+	                                            <li>
+	                                                <a href="{:U('Category/index', array('first'=>$rs['pinyin']))}">{$rs['name']}</a>
+	                                            </li>
+                                        	</volist>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-promotion">
+                                <div class="promotion-info">
+                                    <h1 class="promotion-banner-title">每周TOP排行榜</h1>
+                                    <div class="page-indicator">
+                                        <em class="current">1</em>
+                                        <i class="ilmenicon-slash"></i>
+                                        <span class="total">4</span>
+                                    </div>
+                                </div>
+                                <div id="J_PromotionSlider" class="promotion-items-box">
+                                    <div class="promotion-slider-box">
+                                        <ul class="promotion-items">
+                                            <li>
+                                                <div class="commodity-layout layout-0">
+                                                    <ul class="commodity-items">
+                                                    	<?php $item = $top_item_list[0]; ?>
+                                                        <li class="layout-item-B commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="440" height="440" src="{:get_zimg_url($item['picture_signature'], 440, 440)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 1】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+														<?php $item = $top_item_list[1]; ?>
+                                                        <li class="layout-item-A commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="346" height="220" src="{:get_zimg_url($item['picture_signature'], 346, 220)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 2】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <?php $item = $top_item_list[2]; ?>
+                                                        <li class="layout-item-A commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="346" height="220" src="{:get_zimg_url($item['picture_signature'], 346, 220)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 3】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="commodity-layout layout-0">
+                                                    <ul class="commodity-items">
+                                                    	<?php $item = $top_item_list[3]; ?>
+                                                        <li class="layout-item-B commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="440" height="440" src="{:get_zimg_url($item['picture_signature'], 440, 440)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 4】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+														<?php $item = $top_item_list[4]; ?>
+                                                        <li class="layout-item-A commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="346" height="220" src="{:get_zimg_url($item['picture_signature'], 346, 220)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 5】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <?php $item = $top_item_list[5]; ?>
+                                                        <li class="layout-item-A commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="346" height="220" src="{:get_zimg_url($item['picture_signature'], 346, 220)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 6】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="commodity-layout layout-0">
+                                                    <ul class="commodity-items">
+                                                    	<?php $item = $top_item_list[6]; ?>
+                                                        <li class="layout-item-B commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="440" height="440" src="{:get_zimg_url($item['picture_signature'], 440, 440)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 7】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+														<?php $item = $top_item_list[7]; ?>
+                                                        <li class="layout-item-A commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="346" height="220" src="{:get_zimg_url($item['picture_signature'], 346, 220)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 8】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <?php $item = $top_item_list[8]; ?>
+                                                        <li class="layout-item-A commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="346" height="220" src="{:get_zimg_url($item['picture_signature'], 346, 220)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 9】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="commodity-layout layout-0">
+                                                    <ul class="commodity-items">
+                                                    	<?php $item = $top_item_list[9]; ?>
+                                                        <li class="layout-item-B commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="440" height="440" src="{:get_zimg_url($item['picture_signature'], 440, 440)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 10】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+														<?php $item = $top_item_list[10]; ?>
+                                                        <li class="layout-item-A commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="346" height="220" src="{:get_zimg_url($item['picture_signature'], 346, 220)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 11】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <?php $item = $top_item_list[11]; ?>
+                                                        <li class="layout-item-A commodity-item">
+                                                            <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank" title="{$item['title']}">
+                                                            	<img class="item-image" width="346" height="220" src="{:get_zimg_url($item['picture_signature'], 346, 220)}" alt="{$item['title']}的图片">
+															</a>
+                                                            <div class="author-box">
+                                                                <a target="_blank" class="author-avatar" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8"><img src="/{$item['recommend_user_avatar']|default='images/user_normal.jpg'}" width="24" height="24" title="{$item['recommend_user_nickname']}" /></a><a class="author-name" target="_blank" href="{:U('People/index', array('user_id'=>$item['recommend_user_id']))}?r=8">{$item['recommend_user_nickname']}</a>
+                                                                <span>推荐</span>
+                                                            </div>
+                                                            <div class="story-box">
+                                                                <a href="{:U('Item/detail', array('item_id'=>$item['id']))}?r=8" target="_blank">
+                                                                    <div class="story-info">
+                                                                        <span class="story-title">【TOP 12】{:title_substr($item['title'], 20)}</span>
+                                                                        <span class="story-item-price">{$item['price']}</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="promotion-items-nav prev">
+                                        <i class="icon"></i>
+                                    </div>
+                                    <div class="promotion-items-nav next">
+                                        <i class="icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-cate-title cate-rec">
+                            <span class="title-text">推荐</span>
+                        </div>
+                        <div class="dislike-tip hidden">
+                            <a class="dislike-tip-close" href="javascript:;"></a>
+                            <a class="btn-get-it" href="javascript:;">我知道了</a>
+                        </div>
+                        <div id="J_CardListBox" class="cardlist-wrap">
+                            <ul class="cardlist largecard">
+                            	<volist name="discover_item_feed_list" id="rs">
+	                                <li class="carditem card-story-large">
+	                                    <div class="card-main">
+	                                        <div class="card-hd">
+	                                            <a target="_blank" href="{:U('Item/detail', array('item_id'=>$rs['id']))}?r=H2" title="{$rs['title']}">
+	                                            	<img class="story-image" width="300" height="300" src="{:get_zimg_url($rs['picture_signature'], 300, 300)}" alt="{$rs['title']}的图片" style="margin-top:-20.0px;">
+												</a>
+												<span class="commodity-price">{$rs['price']}</span>
+	                                        </div>
+	                                        <div class="card-bd">
+	                                            <h2 class="story-title" title="{$rs['title']}"><a target="_blank" href="{:U('Item/detail', array('item_id'=>$rs['id']))}?r=H2">{$rs['title']}</a></h2>
+	                                            <div class="author-box">
+	                                                <a class="author-avatar-link" href="{:U('People/index', array('user_id'=>$rs['user_id']))}"><img width="24" height="24" src="{$rs['user_avatar']}" alt="{$rs['user_nickname']}" title="{$rs['nickname']}"></a><a href="{:U('People/index', array('user_id'=>$rs['user_id']))}">{$rs['user_nickname']}</a>&nbsp;发布
+	                                            </div>
+												<if condition="$rs['text']">
+		                                            <div class="story-quote">
+		                                                <q class="quote">{$rs['text']}</q>
+		                                            </div>
+												</if>
+	                                            <div class="story-info" data-eqid="{$rs['id']}">
+	                                                <ul class="stats-list">
+	                                                    <li class="doulist-count">加入豆列&nbsp;{$rs['collects_count']}</li>
+	                                                    <li class="like">喜欢&nbsp;{$rs['likes_count']}</li>
+	                                                    <li class="post">评论&nbsp;{$rs['posts_count']}</li>
+	                                                </ul>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="card-extra">
+	                                        <div class="card-actions">
+	                                        	<if condition="$_is_logined">
+													<a href="javascript:void(0)" 
+														data-at-tips-url="http://www.douban.com/j/accounts/hidetip?kind=34&amp;show_to_all=Y&amp;data_type=html" 
+														data-at-tips-shown="1" 
+														data-item-selector="$(this).closest(&quot;.carditem&quot;)" 
+														data-sync-to-mb="1" 
+														data-url="{:U('Doulist/collect_item', array('item_id'=>$rs['id']))}" 
+														data-target-image="{:get_zimg_url($rs['picture_signature'], 300, 300)}" 
+														data-target-id="{$rs['id']}" class="btn-doulist J_AddToDoulist">加入豆列<em class="count">1</em>
+													</a>
+												<else/>
+	                                            	<a href="http://www.douban.com/accounts/login?redir=http%3A//dongxi.douban.com/%3Fchannel%3Dlogin" 
+													class="btn-doulist J_LoginPopup">加入豆列<em class="count">85</em></a>
+												</if>
+												
+												<if condition="$_is_logined">
+													<a data-tkind-url="item" 
+														data-tid="{$rs['id']}" 
+														href="javascript:void(0)" 
+														class="J_CommodityLikeBtn btn-carditem-like <if condition="$rs['is_liked']">active</if>">
+													    	<span class="main"></span><em class="count">2</em>
+													</a>
+												<else/>
+		                                            <a class="btn-carditem-like J_LoginPopup" 
+														href="http://www.douban.com/accounts/login?redir=http%3A//dongxi.douban.com/%3Fchannel%3Dlogin">
+															<span class="main"></span><em class="count">73</em>
+													</a>
+												</if>
+	                                        </div>
+	                                    </div>
+	                                    <script>
+	                                        Dongxi.data.doulistBtn = {
+											    doulists: {$doulist_list_json},
+											    selectedId: '{$selected_doulist_id}'                              
+											};
+	                                    </script>
+	                                </li>
+                            	</volist>
+                            </ul>
+                        </div>
+                        <a id="J_BtnBackToTop" class="btn-back-to-top" href="#top">回顶部</a>
+                        <script class="J_ExplorePaginatorData" type="text/data" data-url="{$_domain}/feed?until_id={$end_item['bid']}&amp;subscribe_only=0" data-end-bid="{$end_item['bid']}">
+                        </script>
+						<!--
+                        <script>
+                            Dongxi.data.doulistBtn = {
+                                doulists: [],
+                                selectedId: ''
+                            };
+                        </script>
+						-->
+                    </div>
+                    <div class="aside">
+                    </div>
+                    <div class="extra">
+                    </div>
+                </div>
+            </div>
+            <include file="Public:footer" />
+			<script type="text/javascript" src="/scripts/736d1e04ebd108a4.js"></script>
+</body>
+</html>
